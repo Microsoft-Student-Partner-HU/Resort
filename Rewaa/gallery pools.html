@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+         <meta charset="utf-8">
+        <meta name="description" content="  ">
+        <meta name="keywords" content="     ">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <!-- title, fill-->
+        <title>Gallery Pools</title>
+        <!-- style sheets, only change the last one with yours-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="../normalization.css" type="text/css">
+        
+        <link href="gallery.css"rel="stylesheet" >
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="html5shiv.min.js"></script>
+        <script src="respond.min.js"></script>
+    </head>
+    <body>
+      <iframe name="header" src="../header.html"scrolling="no"></iframe>
+       <div class="bar">
+            <a href="gallery.html">All</a>
+            <a href="gallery%20rooms.html">Rooms & Suites</a>
+            <a href="gallery%20pools.html">Pools</a>
+            <a href="gallery%20events.html">Events</a>
+            <a href="gallery%20restaurants.html">Restaurants</a>
+            
+        </div>
+    <div class="all">
+        <div class="row">
+            <div class="column"><img src="../Images/p.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p9.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p10.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow"></div>
+            <div class="column"><img src="../Images/p11.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow"></div>
+            </div>
+        <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 11</div>
+                        <img src="../Images/p.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 11</div>
+                        <img src="../Images/p2.jpg">
+                    </div>
+                     <div class="mySlides">
+                        <div class="numbertext">3 / 11</div>
+                        <img src="../Images/p3.jpg">
+                 </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 11</div>
+                        <img src="../Images/p4.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 11</div>
+                        <img src="../Images/p5.jpg">
+                 </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 11</div>
+                        <img src="../Images/p6.jpg">
+                    </div>
+                     <div class="mySlides">
+                        <div class="numbertext">7 / 11</div>
+                        <img src="../Images/p7.jpg">
+                 </div>
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 11</div>
+                        <img src="../Images/p8.jpg">
+                    </div>
+                     <div class="mySlides">
+                        <div class="numbertext">9 / 11</div>
+                        <img src="../Images/p9.jpg">
+                 </div>
+                    <div class="mySlides">
+                        <div class="numbertext">10 / 11</div>
+                        <img src="../Images/p10.jpg">
+                 </div>
+                    <div class="mySlides">
+                        <div class="numbertext">11 / 11</div>
+                        <img src="../Images/p11.jpg">
+                 </div>
+                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+        </div>
+        <script src="gallery.js"></script>
+    </div>
+        <script src="gallery.js"></script>
+        <iframe class="footer" name="footer" src="../footer.html"scrolling="no"></iframe>
+    </body>
+</html>

@@ -1,0 +1,548 @@
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+b,
+strong {
+  font-weight: bold;
+}
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+ol,
+ul {
+  list-style: none;
+}
+ol li,
+ul li {
+  display: list-item;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html,
+body {
+  height: 100%;
+}
+form {
+  height: 100%;
+}
+/***************************************************************************************
+* GENERAL STARTS
+***************************************************************************************/
+body {
+  font-size: 12px;
+  line-height: 18px;
+  color: #444444;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: #3a7da3;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+  color: #444444;
+  outline: none !important;
+}
+a:focus {
+  color: #444444;
+  outline: none !important;
+  text-decoration: none;
+}
+a.active {
+  color: #444444;
+  text-decoration: none;
+}
+a.btn:hover,
+a.btn:focus {
+  text-decoration: none;
+}
+a .normal-link {
+  color: #444;
+  text-decoration: none;
+}
+a .normal-link:hover {
+  text-decoration: underline;
+}
+p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.silent-text,
+.silent {
+  color: #a1a1a1;
+  display: inline-block;
+}
+small,
+.small {
+  font-size: 11px;
+}
+/***************************************************************************************
+* HEADINGS STARTS
+***************************************************************************************/
+/* All Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+h1,
+.title {
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2,
+.sub-title {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3,
+.title {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+/***************************************************************************************
+* COMMON CSS STARTS
+***************************************************************************************/
+input[type=text]::-ms-clear {
+  display: none;
+}
+.form-control {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #444;
+  padding: 6px 8px;
+}
+.form-control:focus,
+.form-control.active {
+  background: #ffffff;
+  border-color: #cccccc;
+  box-shadow: none;
+  transition: border .2s linear;
+  -webkit-transition: border .2s linear;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.form-control-sm {
+  padding: 3px 8px;
+  height: auto;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed !important;
+}
+.form-control.active::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #444444;
+  opacity: 1;
+}
+.form-control.active::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #444444;
+  opacity: 1;
+}
+.form-control.active:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #444444;
+  opacity: 1;
+}
+.form-control.active:-moz-placeholder {
+  /* Firefox 18- */
+  color: #444444;
+  opacity: 1;
+}
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #BDBDBD;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #BDBDBD;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #BDBDBD;
+  opacity: 1;
+}
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #BDBDBD;
+  opacity: 1;
+}
+.has-error,
+.form-control.has-error,
+.form-control-validation {
+  border-color: #cc0000;
+}
+.has-warning,
+.form-control.has-warning {
+  border-color: #f0ad4e;
+}
+.has-success,
+.form-control.has-success {
+  border-color: #5cb85c;
+}
+.has-error-text,
+.form-group .has-error-text {
+  color: #cc0000;
+}
+.has-error-text,
+.form-group .has-error-text {
+  font-style: normal;
+  font-size: 11px;
+  margin-left: 8px;
+  line-height: 14px;
+}
+.has-warning-text {
+  color: #f0ad4e;
+  font-style: normal;
+  font-size: 11px;
+}
+.has-success-text {
+  color: #5cb85c;
+  font-style: normal;
+  font-size: 11px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  select.form-control {
+    padding-left: 6px;
+}
+}
+@supports (-ms-ime-align:auto) {
+  select.form-control {
+    padding-left: 7px;
+}
+}
+/************************
+Margin/Padding
+*************************/
+.m-t-xl {
+  margin-top: 30px;
+}
+.m-t-lg {
+  margin-top: 20px;
+}
+.m-t-md {
+  margin-top: 15px;
+}
+.m-t-sm {
+  margin-top: 10px;
+}
+.m-t-xs {
+  margin-top: 5px;
+}
+.m-t-0 {
+  margin-top: 0;
+}
+.m-b-lg {
+  margin-bottom: 20px;
+}
+.m-b-xlg {
+  margin-bottom: 50px;
+}
+.m-b-md {
+  margin-bottom: 15px;
+}
+.m-b-sm {
+  margin-bottom: 10px;
+}
+.m-b-xs {
+  margin-bottom: 5px;
+}
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-l-lg {
+  margin-left: 20px;
+}
+.m-l-md {
+  margin-left: 15px;
+}
+.m-l-sm {
+  margin-left: 10px;
+}
+.m-l-xs {
+  margin-left: 5px;
+}
+.m-l-0 {
+  margin-left: 0;
+}
+.m-r-lg {
+  margin-right: 20px;
+}
+.m-r-md {
+  margin-right: 15px;
+}
+.m-r-sm {
+  margin-right: 10px;
+}
+.m-r-xs {
+  margin-right: 5px;
+}
+.m-r-0 {
+  margin-right: 0;
+}
+.p-t-lg {
+  padding-top: 20px;
+}
+.p-t-md {
+  padding-top: 15px;
+}
+.p-t-sm {
+  padding-top: 10px;
+}
+.p-t-xs {
+  padding-top: 5px;
+}
+.p-b-lg {
+  padding-bottom: 20px;
+}
+.p-b-md {
+  padding-bottom: 15px;
+}
+.p-b-sm {
+  padding-bottom: 10px;
+}
+.p-b-0 {
+  padding-bottom: 0;
+}
+.p-b-xs {
+  padding-bottom: 5px;
+}
+.p-l-lg {
+  padding-left: 20px;
+}
+.p-l-md {
+  padding-left: 15px;
+}
+.p-l-sm {
+  padding-left: 10px;
+}
+.p-l-xs {
+  padding-left: 5px;
+}
+.p-r-lg {
+  padding-right: 20px;
+}
+.p-r-md {
+  padding-right: 15px;
+}
+.p-r-sm {
+  padding-right: 10px;
+}
+.p-r-xs {
+  padding-right: 5px;
+}
+.no-mar {
+  margin: 0 !important;
+}
+.no-pad {
+  padding: 0 !important;
+}
+.p-l-n {
+  padding-left: 0;
+}
+.p-r-n {
+  padding-right: 0;
+}
+.p-t-n {
+  padding-top: 0;
+}
+.ptb-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-lg {
+  font-size: 16px;
+}
+img.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+}
+.v-table {
+  display: table;
+}
+.v-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.relative {
+  position: relative;
+}
+.float-none {
+  float: none;
+}
+.d-i-b {
+  display: inline-block !important;
+}
+.data-container {
+  border: 1px solid #eeeeee;
+  min-height: 600px;
+}
+.d-b {
+  display: block !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.font-size-xs {
+  font-size: 15px;
+}
+.text-left-xs {
+  text-align: left !important;
+}
+.text-right-xs {
+  text-align: right !important;
+}
+p.text-wrapping,
+.text-wrapping {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*----- Text ellipes CSS end ----*/
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+  * {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }

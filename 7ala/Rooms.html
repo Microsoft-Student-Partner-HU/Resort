@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="  ">
+        <meta name="keywords" content="     ">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <title>Rooms&amp;Prices</title>
+        <link rel="stylesheet" href="Rooms.css"/>
+        <link rel="stylesheet" href="swiper.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="normalization.css" type="text/css">
+        <link href="footer.css"rel="stylesheet" >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <script src="https://kit.fontawesome.com/5c5b63cd5e.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Cormorant+Upright&family=Elsie&family=Kaushan+Script&family=Niconne&family=Oregano&family=Original+Surfer&family=Tangerine:wght@700&display=swap');
+            body
+            {
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+            div.header
+            {
+                margin-top: 20px;
+                text-align: center;
+                width: 100%;
+                background: #fff;
+                font-family: 'Original Surfer';
+                color: #262626;
+            }
+            div.bio
+            {
+                width: 1000px;
+                margin-left: 200px;
+                text-align: left;
+                margin-top: 50px;
+            }
+            div.facilities
+            {
+                display: flex;
+                width: 1000px;
+                margin-left: 200px;
+                margin-bottom: 50px;
+            }
+            div.facil
+            {
+                width: 240px;
+                height: 130px;
+                text-align: center;
+                margin-right: 10px;
+                background: #f2f2f2;
+            }
+            span
+            {
+                font-size: 19px;
+            }
+            h4
+            {
+                color: dimgray;
+                font-weight: 100;
+            }
+            .head,.last
+            {
+                margin 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .last
+            {
+                min-height: 10px;
+                margin-bottom: 30px;
+            }
+            .card
+            {
+                position: relative;
+                background: #fff;
+                width: 500px;
+                height: 500px;
+                margin: 0 auto;
+            }
+            .card:hover
+            {
+                box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
+                transition: 0.4s;
+            }
+            .card1:hover,.card2:hover,.card3:hover
+            {
+                box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
+                transition: 0.4s;
+            }
+            .card1,.card2,.card3
+            {
+                position: relative;
+                background-color: #f2f2f2;
+                width: 310px;
+                height: 450px;
+            }
+            .card1 .content,.card2 .content,.card3 .content
+            {
+                width: 310px;
+                text-align: center;
+            }
+            .card1
+            {
+                margin-left: 10px;
+            }
+            .card2
+            {
+                margin-left: 30px;
+            }
+            .card3
+            {
+                margin-left: 30px;
+            }
+            .card .content
+            {
+                width: 500px;
+                text-align: center;
+            }
+            .card1 .image,.card2 .image,.card3 .image
+            {
+                width: 310px;
+                height: 175px;
+            }
+            .card .image
+            {
+                position: relative;
+                width: 500px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .card .content a:hover
+            {
+                color: white;
+                background-color: dimgray;
+                transition: 0.6s;
+            }
+            .card1 .content a:hover,.card2 .content a:hover,.card3 .content a:hover
+            {
+                color: white;
+                background-color: dimgray;
+                transition: 0.6s;
+            }
+            .card1 .content a,.card2 .content a,.card3 .content a
+            {
+                display: inline-block;
+                margin: 10px 0 0;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: 1px solid dimgray;
+                color: dimgray;
+                font-weight: 600;
+                font-family: 'Original Surfer';
+                font-size: 16px;
+            }
+            .card .content a
+            {
+                display: inline-block;
+                margin: 10px 0 0;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: 1px solid dimgray;
+                color: dimgray;
+                font-weight: 600;
+                font-family: 'Original Surfer';
+                font-size: 16px;
+            }
+            .swiper-slide
+            {
+                width: 500px;
+            }
+            .imgheader
+            {
+                width: 100%;
+                height: 500px;
+                padding: 0;
+                margin: 0;
+            }
+            .imgheader .imgslider
+            {
+                width: 100%;
+                height: 488px;
+                background: url(../Images/header12.jpg);
+                animation: slide 20s infinite;
+            }
+            @keyframes slide
+            {
+                20%{
+                     background: url(../Images/headxx.jpg);
+                }
+                40%{
+                     background: url(../Images/headerxx.jpg);
+                }
+                60%{
+                     background: url(../Images/header7.jpg);
+                }
+                80%{
+                     background: url(../Images/header2.jpg);
+                }
+                100%{
+                     background: url(../Images/header12.jpg);
+                }
+            }
+            .h22
+            {
+                text-align: left;
+                font-size: 30px;
+                margin-top: 40px;
+                margin-bottom: 30px;
+                color: #232323;
+                font-family: 'Original Surfer';
+            }
+            .h11
+            {
+                margin-left: 200px;
+                font-family: 'Original Surfer';
+                margin-top: 30px;
+            }
+            .xo
+            {
+                font-family: 'Tangerine';
+                margin: 10px 0 0 0;
+                font-size: 60px;
+                font-weight: 900;
+            }
+            .xo1
+            {
+                font-family: 'Tangerine';
+                margin: 10px 0 0 0;
+                font-size: 45px;
+                font-weight: 900;
+            }
+            .xox1
+            {
+                font-family: 'Tangerine';
+                margin: 5px 20px 20px;
+                font-size: 25px;
+            }
+            .xox
+            {
+                font-family: 'Tangerine';
+                margin: 0 0 10px;
+                font-size: 30px;
+            }
+            .head{background: #e6e6e6;width: 100%;}
+            .last{background: #fff;width: 100%;margin-top: 40px;}
+            .swiper-wrapper{margin-bottom: 10px;}
+            .finals
+            {
+                margin-left: 200px;
+                margin-right: 200px;
+                width: 950px;
+                height: auto;
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+            .title-final
+            {
+                font-size: 25px;
+                font-family: 'Original Surfer'
+            }
+            .ahmed
+            {
+                height: 180px;
+                width: 350px;
+            }
+            .titlex
+            {
+                font-family: 'Original Surfer';
+            }
+            .im
+            {
+                height: 130px;
+                width: 170px;
+            }
+            .iframeHeader
+            {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 120px;
+            }
+            .iframeFooter
+            {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 450px;
+            }
+            .good-to-know
+            {
+                width: 100%;
+                display: flex;
+                height: auto;
+            }
+            .divx,.divxx
+            {
+                width: 470px;
+                height: 250px;
+                background-color: #f2f2f2;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #262626;
+            }
+            .divxx
+            {
+                margin-left: 10px;
+            }
+            .pop
+            {
+                margin-top: 20px;
+            }
+            .fa-color
+            {
+                color: #b30047;
+            }
+            .popx,.popx1
+            {
+                font-size: 20px;
+                font-family: 'Original Surfer';
+                margin-bottom: 20px;
+                margin-top: 20px;
+                font-weight: 900;
+            }
+            .popx1
+            {
+                margin-bottom: 10px;
+            }
+            .popxx,.popxx1
+            {
+                font-size: 20px;
+                font-family: 'Original Surfer';
+                font-weight: 100;
+                margin: 0;
+            }
+            .popxx1
+            {
+                display: flex;
+            }
+            .cardx
+            {
+                margin-left: 70px;
+            }
+            .cardxx,.cardx
+            {
+                width: 100px;
+                height: 55px;
+                margin-right: 20px;
+                margin-top: 12px;
+            }
+            .corn
+            {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .cornx
+            {
+                text-align: center;
+                font-family: 'Original Surfer';
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            .fa-colorx
+            {
+                color: #404040;
+            }
+            .corn-coffee
+            {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+            .star
+            {
+                width: 100%;
+                height: 150px;
+                background-color: #f2f2f2;
+                text-align: center;
+            }
+            .starx
+            {
+                width: 170px;
+                height: 130px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <div class="imgheader">
+            <div class="imgslider"></div>
+        </div>
+        <div class="header">
+            <h1 class="titlex" style="font-size: 50px">ROOMS</h1>
+            <h1 class="titlex">Maximize Your Time In Sinai</h1>
+            <div class="bio">
+                <span>Luxury awaits at the 5-star <span style="font-weight: 900">7</span>asebat Hotel &amp; Resort Beach. The lively seaside district can be seen from all of the 297 rooms which have balconies or terraces offering either full or partial sea view.</span><br><br>
+                <span>Free WiFi access and a Smart TV with casting make in-room entertainment easy. Choose a comfortable stay in our Deluxe Rooms or take advantage of our Executive Lounge access when you book an Executive Room or Suite. Our spacious Family Suite feature special amenities for kids; our magnificent Villas are ideal for an unforgettable Sinai city and beach break.</span>
+                <h2 class="h22">All our rooms include:</h2>
+            </div>
+            <div class="facilities">
+                <div class="facil">
+                    <p class="corn"><i class="fas fa-wifi fa-3x fa-colorx"></i></p>
+                    <p class="cornx">Free WiFi internet access</p>
+                </div>
+                <div class="facil">
+                    <p class="corn-coffee"><i class="fas fa-mug-hot fa-3x fa-colorx"></i></p>
+                    <p class="cornx">Tea &amp; coffee facilities</p>
+                </div>
+                <div class="facil">
+                    <p class="corn"><i class="fas fa-tv fa-3x fa-colorx"></i></p>
+                    <p class="cornx">LCD TV</p>
+                </div>
+                <div class="facil">
+                    <p class="corn"><i class="fas fa-parking fa-3x fa-colorx"></i></p>
+                    <p class="cornx">Free Parking</p>
+                </div>
+                <div class="facil">
+                    <p class="corn"><i class="fas fa-cookie fa-3x fa-colorx"></i></p>
+                    <p class="cornx">Free Cookies</p>
+                </div>
+            </div>
+        </div>
+        <div class="head">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/11.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Classic Room</h1>
+                                <h4 class="xox">with partial sea veiw</h4>
+                                <a href="RoomDetails.html#ClassicRoom" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/21.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Executive Room</h1>
+                                <h4 class="xox">with sea veiw</h4>
+                                <a href="RoomDetails.html#ExecutiveRoom" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/bedroom8.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Deluxe Suite</h1>
+                                <h4 class="xox">with sea veiw</h4>
+                                <a href="RoomDetails.html#DeluxeSuite" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/41.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Executive Suite</h1>
+                                <h4 class="xox">with sea veiw</h4>
+                                <a href="RoomDetails.html#Executive Suite" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/kids.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Family Room</h1>
+                                <h4 class="xox">with partial sea veiw</h4>
+                                <a href="RoomDetails.html#FamilyRoom" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/61.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Deluxe Villa</h1>
+                                <h4 class="xox">with partial sea veiw</h4>
+                                <a href="RoomDetails.html#DeluxeVilla" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/71.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Presidential Suite</h1>
+                                <h4 class="xox">with sea veiw</h4>
+                                <a href="RoomDetails.html#PresidentialSuite" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/81.jpg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Luxury Beach Villa</h1>
+                                <h4 class="xox">with private pool</h4>
+                                <a href="RoomDetails.html#LuxuryBeachVilla" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="../Images/91.jpeg">
+                            </div>
+                            <div class="content">
+                                <h1 class="xo">Pool Villa Lagoon</h1>
+                                <h4 class="xox">overwater</h4>
+                                <a href="RoomDetails.html#PoolVillaLagoon" target="_self">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="h11">Latest Offers</h1>
+        <div class="last">
+            <div class="card1">
+                <div class="image">
+                    <img src="../Images/food.jpg">
+                </div>
+                <div class="content">
+                    <h1 class="xo1">Full board package in 7asebat Beach</h1>
+                    <h4 class="xox1">Full board package at 7asebat Hotel&amp;Resort Beach</h4>
+                    <a href="Offers.html" target="_blank">Find Out More</a>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="image">
+                    <img src="../Images/summer.jpg">
+                </div>
+                <div class="content">
+                    <h1 class="xo1">7asebat Summer Package</h1>
+                    <h4 class="xox1">Have a relaxing time this summer and experience best activities</h4>
+                    <a href="Offersx.html" target="_blank">Find Out More</a>
+                </div>
+            </div>
+            <div class="card3">
+                <div class="image">
+                    <img src="../Images/headerxxx.jpg">
+                </div>
+                <div class="content">
+                    <h1 class="xo1">Discounts up to 25% inclusive of breakfast</h1>
+                    <h4 class="xox1">Up to 25% off , breakfast included at 7asebat Beach</h4>
+                    <a href="Offersxx.html" target="_blank">Find Out More</a>
+                </div>
+            </div>
+        </div>
+        <div class="finals">
+            <p class="title-final">Good To Know</p>
+            <div class="good-to-know">
+                <div class="divx">
+                    <p class="pop"><i class="fas fa-tag fa-5x fa-color"></i></p>
+                    <p class="popx">Check in and Check out</p>
+                    <p class="popxx">Check in from 02.00pm</p>
+                    <p class="popxx">Check out until 12.00pm</p>
+                </div>
+                <div class="divxx">
+                    <p class="pop"><i class="fas fa-plane-departure fa-5x fa-color"></i></p>
+                    <p class="popx">Airport transfer service</p>
+                    <p class="popxx">We can arrange a chauffered service to and from the airport for guests upon request. Kindly place your request at least 24 hours prior arrival.</p>
+                </div>
+            </div>
+            <div class="good-to-know">
+                <div class="divx">
+                    <p class="pop"><i class="fas fa-globe fa-5x fa-color"></i></p>
+                    <p class="popx">Languages spoken at the hotel</p>
+                    <p class="popxx">English, Arabic, German, French and Russian</p>
+                </div>
+                <div class="divxx">
+                    <p class="pop"><i class="fas fa-money-bill fa-5x fa-color"></i></p>
+                    <p class="popx1">Payment options</p>
+                    <p class="popxx1"><img src="../Images/card.png" class="cardx"><img src="../Images/visa.png" class="cardxx"><img src="../Images/mastercardx.png" class="cardxx"></p>
+                </div>
+            </div>
+        </div>
+        <div class="star">
+            <p><img src="../Images/Logo.png" class="starx"></p>
+        </div>
+        <iframe class="iframeFooter" src="../footer.html" scrolling="no"></iframe>
+        <script src="swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+    </body>
+</html>

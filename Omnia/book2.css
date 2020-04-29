@@ -1,0 +1,132 @@
+*,*::after,*::before
+{
+  margin: 0;padding: 0; box-sizing: inherit;
+ font-family: sans-serif;
+    
+}
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    box-sizing: border-box;
+}
+section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-book
+{
+    height: 100vh;
+    background-image: url("bac.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.book{
+    width: 80%;
+    height:72%;
+    background-image: linear-gradient(105deg,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,transparent 50%),url(bg.jpg);
+    background-size: 100%;
+    background-position: right;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.2);
+}
+.books-form
+{
+    padding: 6rem;
+    width: 50%;
+}
+.heading
+{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+.form-group:nth-child(3){
+    margin-bottom: 0.5rem;
+}
+.form-input
+{
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 1.5rem;
+    border-radius: 2px;
+    background-color: rgba(196,223,250,0.4);
+    border: none;
+    width: 80%;
+    display: block;
+    transition: all 0.5s;        
+}
+.form-input:focus{
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    border-bottom: 3px solid #07575b;
+    background-color: rgb(196,223,230);
+}
+.form-input:focus:invalid{
+    border: 3px solid #16817a;
+}
+.form-input::-webkit-input-placeholder{
+    color: gray;
+}
+.form-label
+{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+}
+.form-label:placeholder-shown + .form-label
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-4rem);
+}
+.btn,.btn:link ,.btn:visited
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4rem;
+    background-color: #07575b;
+    color: white;
+}
+.btn:hover{
+    transform: translate(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+.btn:active,.btn:focus{
+    outline: none;
+    transform: translate(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+.iframeHeader
+{
+    margin: -2px;
+    width: 100%;
+    height: 17%
+}
+.iframeFooter
+{
+    margin: -2px;
+    width: 100%;
+    height: 62.6%
+}

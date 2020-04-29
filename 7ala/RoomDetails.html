@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Room Details</title>
+        <link rel="stylesheet" href="Style.css"/>
+        <link rel="stylesheet" href="swiper.min.css">
+        <script src="https://kit.fontawesome.com/5c5b63cd5e.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Cormorant+Upright&family=Elsie&family=Kaushan+Script&family=Niconne&family=Oregano&family=Original+Surfer&family=Tangerine:wght@700&display=swap');
+            body
+            {
+                background-size: cover;
+                font-family: sans-serif;
+                padding: 0;
+                margin: 0;
+                background: #fffffa;
+            }
+            .imgheader
+            {
+                width: 100%;
+                height: 500px;
+                margin-bottom: 30px;
+            }
+            .imgheader .imgslider
+            {
+                width: 100%;
+                height: 488px;
+                background: url(../Images/header12.jpg);
+                animation: slide 20s infinite;
+            }
+            @keyframes slide
+            {
+                20%{
+                     background: url(../Images/headxx.jpg);
+                }
+                40%{
+                     background: url(../Images/headerxx.jpg);
+                }
+                60%{
+                     background: url(../Images/header7.jpg);
+                }
+                80%{
+                     background: url(../Images/header2.jpg);
+                }
+                100%{
+                     background: url(../Images/header12.jpg);
+                }
+            }
+            .title
+            {
+                font-size: 45px;
+                font-family: 'Original Surfer';
+                font-weight: 600;
+                margin: 0;
+                color: #262626;
+                margin-left: 150px;
+            }
+            .head-title
+            {
+                width: 100%;
+                height: auto;
+            }
+            .infox
+            {
+                font-size: 20px;
+                color: #262626;
+                font-family: 'Original Surfer';
+                font-style: italic;
+                font-weight: 100;
+                margin-left: 150px;
+            }
+            .info
+            {
+                margin-left: 150px;
+                color: #262626;
+                font-family: 'Cormorant Upright';
+                margin-right: 150px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .minititle
+            {
+                font-size: 30px;
+                font-weight: 600;
+                color: #262626;
+                margin: 0;
+                margin-left: 150px;
+                font-family: 'Original Surfer';
+            }
+            .minilist
+            {
+                margin-left: 150px;
+                color: #262626;
+                font-size: 18px;
+                list-style: square;
+                margin-bottom: 60px;
+                font-family: 'Cormorant Upright';
+                font-weight: 600;
+            }
+            .slide-image
+            {
+                margin: 0 150px;
+            }
+            .slidershow
+            {
+                width: 1050px;
+                height: 500px;
+                overflow: hidden;
+            }
+            .middle
+            {
+                position: absolute;
+            }
+            .navigation
+            {
+                position: absolute;
+                bottom: 20px;
+                left: 525px;
+                transform: translateX(-50%);
+                display: flex;
+            }
+            .bar
+            {
+                width: 60px;
+                height: 10px;
+                border: 2px solid #fff;
+                margin: 10px;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+            .bar:hover
+            {
+                background: #fff;
+            }
+            input[name="r"]
+            {
+                position: absolute;
+                visibility: hidden;
+            }
+            .slides
+            {
+                width: 500%;
+                height: 100%;
+                display: flex;
+            }
+            .slide
+            {
+                width: 20%;
+                transition: 0.6s;
+            }
+            .slide img
+            {
+                width: 100%;
+                height: 100%;
+            }
+            #r1:checked ~ .s1{margin-left: 0;}
+            #r2:checked ~ .s1{margin-left: -20%;}
+            #r3:checked ~ .s1{margin-left: -40%;}
+            #r4:checked ~ .s1{margin-left: -60%;}
+            #r5:checked ~ .s1{margin-left: -80%;}
+            #r11:checked ~ .s1{margin-left: 0;}
+            #r22:checked ~ .s1{margin-left: -20%;}
+            #r33:checked ~ .s1{margin-left: -40%;}
+            #r44:checked ~ .s1{margin-left: -60%;}
+            #r55:checked ~ .s1{margin-left: -80%;}
+            #r111:checked ~ .s1{margin-left: 0;}
+            #r222:checked ~ .s1{margin-left: -20%;}
+            #r333:checked ~ .s1{margin-left: -40%;}
+            #r444:checked ~ .s1{margin-left: -60%;}
+            #r555:checked ~ .s1{margin-left: -80%;}
+            #r1111:checked ~ .s1{margin-left: 0;}
+            #r2222:checked ~ .s1{margin-left: -20%;}
+            #r3333:checked ~ .s1{margin-left: -40%;}
+            #r4444:checked ~ .s1{margin-left: -60%;}
+            #r5555:checked ~ .s1{margin-left: -80%;}
+            #r6:checked ~ .s1{margin-left: 0;}
+            #r7:checked ~ .s1{margin-left: -20%;}
+            #r8:checked ~ .s1{margin-left: -40%;}
+            #r9:checked ~ .s1{margin-left: -60%;}
+            #r0:checked ~ .s1{margin-left: -80%;}
+            #r66:checked ~ .s1{margin-left: 0;}
+            #r77:checked ~ .s1{margin-left: -20%;}
+            #r88:checked ~ .s1{margin-left: -40%;}
+            #r99:checked ~ .s1{margin-left: -60%;}
+            #r00:checked ~ .s1{margin-left: -80%;}
+            #r666:checked ~ .s1{margin-left: 0;}
+            #r777:checked ~ .s1{margin-left: -20%;}
+            #r888:checked ~ .s1{margin-left: -40%;}
+            #r999:checked ~ .s1{margin-left: -60%;}
+            #r000:checked ~ .s1{margin-left: -80%;}
+            #r6666:checked ~ .s1{margin-left: 0;}
+            #r7777:checked ~ .s1{margin-left: -20%;}
+            #r8888:checked ~ .s1{margin-left: -40%;}
+            #r9999:checked ~ .s1{margin-left: -60%;}
+            #r0000:checked ~ .s1{margin-left: -80%;}
+            #rx1:checked ~ .s1{margin-left: 0;}
+            #rx2:checked ~ .s1{margin-left: -20%;}
+            #rx3:checked ~ .s1{margin-left: -40%;}
+            #rx4:checked ~ .s1{margin-left: -60%;}
+            #rx5:checked ~ .s1{margin-left: -80%;}
+            .image-title
+            {
+                text-align: center;
+                position: relative;
+                margin-left: 130px;
+                margin-right: 130px;
+                margin-bottom: 0px;
+                font-family: 'Tangerine';
+                font-size: 50px;
+                font-weight: 900;
+            }
+            .image-title:before
+            {
+                content: "";
+                display: block;
+                width: 390px;
+                height: 1px;
+                position: absolute;
+                background: #d9d9d9;
+                left: 0;
+                top: 50%;
+            }
+            .image-title:after
+            {
+                content: "";
+                display: block;
+                width: 390px;
+                height: 1px;
+                position: absolute;
+                background: #d9d9d9;
+                right: 0;
+                top: 50%;
+            }
+            .room-details
+            {
+                margin-left: 150px;
+                margin-right: 150px;
+                margin-top: 560px;
+                width: 1050px;
+                height: 400px;
+                display: flex;
+                margin-bottom: 100px;
+            }
+            .room-bio
+            {
+                width: 700px;
+                height: 100%;
+                background: #e6e6e6;
+            }
+            .room-bio2
+            {
+                width: 700px;
+                height: 100%;
+                background: #e6e6e6;
+                margin-left: 350px;
+            }
+            .details-title
+            {
+                padding-top: 10px;
+                font-size: 20px;
+                text-align: center;
+                font-family: 'Cormorant Upright';
+                font-weight: 900;
+            }
+            .details
+            {
+                margin: 0 20px 10px;
+                color: #1a1a1a;
+                text-align: justify;
+                font-weight: 600;
+                font-size: 18px;
+                font-family: 'Cormorant Upright';
+            }
+            .room-details .room-bio a:hover,.room-details .room-bio2 a:hover
+            {
+                color: white;
+                background-color: dimgray;
+                transition: 0.6s;
+            }
+            .room-details .room-bio a,.room-details .room-bio2 a
+            {
+                display: inline-block;
+                margin: 10px 0 0;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-family: 'Oregano';
+                font-size: 20px;
+                border: 1px solid dimgray;
+                color: dimgray;
+                font-weight: 600;
+                float: right;
+                margin-right: 20px;
+            }
+            .price2
+            {
+                width: 340px;
+                height: 100%;
+                margin-left: 150px;
+                margin-top: 560px;
+            }
+            .price
+            {
+                width: 340px;
+                height: 100%;
+                margin-left: 10px;
+            }
+            .amenities
+            {
+                position: absolute;
+                width: 150px;
+                height: 30px;
+                margin-top: 0;
+                transition: 0.8s;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            .amenities:hover
+            {
+                width: 700px;
+                height: 400px;
+                background-color: rgba(0,0,0,0.9);
+            }
+            .ameni
+            {
+                margin: 10px 0 0 20px;
+                cursor: default;
+                font-family: 'Tangerine';
+                font-size: 20px;
+            }
+            .habal
+            {
+                width: 700px;
+                height: 400px;
+                color: white;
+            }
+            .habal1
+            {
+                text-align: center;
+                font-size: 25px;
+                font-family: 'Oregano';
+                margin: 0;padding: 0;
+                font-variant-caps: all-small-caps;
+            }
+            .blah
+            {
+                display: flex;
+            }
+            .habal2
+            {
+                margin-right: 40px;
+                margin-left: 80px;
+            }
+            .habal3
+            {
+                font-size: 18px;
+                font-family: 'Oregano';
+                margin-bottom: 0;padding: 0;
+                margin-top: 0px;
+            }
+            .ull
+            {
+                margin: 0;
+                font-family: 'Oregano';
+            }
+            .ull:hover
+            {
+                background: #333333;
+            }
+            .front
+            {
+                width: 340px;
+                height: 400px;
+                background-color: dimgray;
+                position: absolute;
+                overflow: hidden;
+                backface-visibility: hidden;
+                transition: transform .6s linear;
+                transform: perspective(600px) rotateY(0deg);
+            }
+            .back
+            {
+                transform: perspective(600px) rotateY(180deg);
+                background-color: dimgray;
+                width: 340px;
+                height: 400px;
+                overflow: hidden;
+                backface-visibility: hidden;
+                transition: transform .6s linear;
+                position: absolute;
+            }
+            .price2:hover > .front
+            {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+            .price2:hover > .back
+            {
+                transform: perspective(600px) rotateY(0deg);
+            }
+            .price:hover > .front
+            {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+            .price:hover > .back
+            {
+                transform: perspective(600px) rotateY(0deg);
+            }
+            .pri
+            {
+                top: 50%;
+                left: 50%;
+            }
+            .view-price
+            {
+                color: white;
+                font-size: 35px;
+                text-align: center;
+                margin-right: 25px;
+                font-style: italic;
+                font-family: 'Kaushan Script';
+            }
+            .front img,.back img
+            {
+                width: 100%;
+                height: 200px;
+            }
+            .inf
+            {
+                color: white;
+                font-family: 'Elsie';
+                margin-left: 10px;
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+            .infx
+            {
+                color: white;
+                margin-left: 30px;
+                margin-right: 80px;
+                font-size: 20px;
+                margin-top: 5px;
+                font-weight: 100;
+                margin-bottom: 0;
+                font-family: 'Oregano';
+            }
+            .dash
+            {
+                margin: 0;
+                color: beige;
+            }
+            .prices
+            {
+                margin: 0 65px;
+                color: white;
+                font-style: italic;
+                font-family: 'Oregano';
+            }
+            .pri
+            {
+                font-weight: 900;
+                font-size: 18px;
+            }
+            .xsmall
+            {
+                text-align: center;
+                font-size: 25px;
+                margin: 0;
+                font-family: 'Tangerine';
+                color: darkgray;
+                font-style: italic;
+                margin-bottom: 50px;
+            }
+            .iframeHeader
+            {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 120px;
+            }
+            .iframeFooter
+            {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 450px;
+            }
+            .top
+            {
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                background: rgba(0,0,0,0.1);
+                bottom: 30px;
+                right: 40px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: dimgray;
+                border-radius: 50px;
+            }
+            .top:hover
+            {
+                box-shadow: 3px 3px rgba(0,0,0,0.2);
+                transition: 0.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <div class="imgheader">
+            <div class="imgslider"></div>
+        </div>
+        <div class="head-title">
+            <p class="title">ROOMS</p>
+            <p class="info">Make our Red Sea stay unforgettable by staying in one of our comfortable rooms/suites and villas at 7asebat Resort Beach. Contemporary designs and natural daylight complement high quality Egyptian cotton fabrics and elegant furniture. All our 5-star rooms feature tea and coffee making facilities, air conditioning, LCD TV, hairdryer, minibar and free WiFi.</p>
+            <p class="info">Choose a Deluxe Room with your choice of city, pool or sea views. Alternatively, option for more space in a Deluxe Suite or spoil yourself with a stay in our Pool Villa Lagoon. Our spacious Family Rooms can accommodate up to three children and offer a balcony with views of either the mountains or Red Sea.</p>
+            <p class="info">If you enjoy keeping active, take a dip in our beautiful swimming pool, or visit the luxury 24 -hour health club, which has a state-of-the-art gym and steam rooms.</p>
+            <p class="minititle">All our rooms include:</p>
+            <ul class="minilist">
+                <li>Free WiFi Internet access</li>
+                <li>Complimentary tea and coffee making facilities</li>
+                <li>LCD TV</li>
+                <li>Minibar</li>
+                <li>Egyptian cotton fabrics</li>
+            </ul>
+            <p class="minititle">IMPORTANT NOTE!</p>
+            <p class="infox">* The following facilities are not considered as part of the room price! (Additional Charge) *</p>
+            <ul class="minilist">
+                <li>Tickets to shows/attractions</li>
+                <li>Babysitting/Child services</li>
+                <li>Ironing service</li>
+                <li>Dry cleaning</li>
+                <li>Laundry</li>
+                <li>Business center</li>
+                <li>Meeting/Banquet facilities</li>
+                <li>Tennis equipment</li>
+                <li>Water sports facilities</li>
+                <li>Snorkeling / Diving</li>
+                <li>Tennis court</li>
+                <li>Turkish/Steam Bath</li>
+                <li>Massage / Spa</li>
+                <li>Sauna</li>
+            </ul>
+        </div>
+        <h1 class="image-title" id="ClassicRoom">Classic Room</h1>
+        <p class="xsmall">with partial sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slide s1">
+                        <img src="../Images/11.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathxx.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/breakfast1.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/13.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/14.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="room-details">
+            <div class="room-bio">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>In-room safe</li>
+                                    <li>Non-smoking rooms available</li>
+                                    <li>Smoking rooms available</li>
+                                    <li>Work desk</li>
+                                    <li>King bed</li>
+                                    <li>Hypoallergenic bed</li>
+                                    <li>Sitting area</li>
+                                    <li>Sofa bed</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Flat-screen TV</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Room Details:</p>
+                <p class="details">The partial sea views give our Rooms a spacious feel whilst offering the opportunity to glimpse the splendour of the blue water from your own balcony. Set in contemporary surroundings, the rooms offer either king-sized or twin-sized bed options.</p>
+                <p class="details">Our 49 inch Smart TV with casting with a number of international channels allows you to relax in the 35 sqm room which also offers free WiFi, a working desk and seating area. The heat of the day can be relieved with in-room air-conditioning and the minibar is stocked with alcoholic and non-alcoholic refreshments.</p>
+                <p class="details">Outside of the room the facilities continue with complimentary access to the outdoor pool and Body Talk Fitness Centre.</p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="price">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">1100</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">2200</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="image-title" id="ExecutiveRoom">Executive Room</h1>
+        <p class="xsmall">with sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r11" checked>
+                    <input type="radio" name="r" id="r22">
+                    <input type="radio" name="r" id="r33">
+                    <input type="radio" name="r" id="r44">
+                    <input type="radio" name="r" id="r55">
+                    <div class="slide s1">
+                        <img src="../Images/21.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/breakfast.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom5.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom12.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/13.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r11" class="bar"></label>
+                    <label for="r22" class="bar"></label>
+                    <label for="r33" class="bar"></label>
+                    <label for="r44" class="bar"></label>
+                    <label for="r55" class="bar"></label>
+                </div>
+            </div>
+        </div>
+            <div class="price2">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">1500</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">2900</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        <div class="room-details">
+            <div class="room-bio2">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>In-room safe</li>
+                                    <li>Non-smoking rooms available</li>
+                                    <li>Smoking rooms available</li>
+                                    <li>Work desk</li>
+                                    <li>King bed</li>
+                                    <li>Hypoallergenic bed</li>
+                                    <li>Sitting area</li>
+                                    <li>Sofa bed</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Flat-screen TV</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Room Details:</p>
+                <p class="details">Located on the higher floors of the hotel, our king or twin bed Executive Rooms offer the perfect environment for business travellers, who also benefit from access to the Executive Lounge. Guests can enjoy breakfast, afternoon refreshments and evening drinks and canapés. International newspapers are also available alongside a dedicated check-in/check-out service.</p>
+                <p class="details">In-room facilities set over 35 sqm include a bathroom with walk-in shower and spacious bathtub. Rooms features  air-conditioning, a seating area, 49 inch Smart TV with casting, a working desk, tea and coffee making facilities, and  minibar. If you wish to spend some time on the public beach, a kit is available and includes a towel, an umbrella and a beach mat.</p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+        <h1 class="image-title" id="DeluxeSuite">Deluxe Suite</h1>
+        <p class="xsmall">with sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r111" checked>
+                    <input type="radio" name="r" id="r222">
+                    <input type="radio" name="r" id="r333">
+                    <input type="radio" name="r" id="r444">
+                    <input type="radio" name="r" id="r555">
+                    <div class="slide s1">
+                        <img src="../Images/bedroom8.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/livingroom9.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom13.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/breakfast.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/balcony2.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r111" class="bar"></label>
+                    <label for="r222" class="bar"></label>
+                    <label for="r333" class="bar"></label>
+                    <label for="r444" class="bar"></label>
+                    <label for="r555" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="room-details">
+            <div class="room-bio">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Balcony/Lanai/Terrace</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>Complimentary bottled water</li>
+                                    <li>Flooring : Tiles</li>
+                                    <li>Work desk</li>
+                                    <li>King bed</li>
+                                    <li>Hypoallergenic bed</li>
+                                    <li>Sitting area</li>
+                                    <li>Separate dining area</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Interconnecting rooms</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                    <li>Complimentary toiletries</li>
+                                    <li>Bidet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Suite Details:</p>
+                <p class="details">Relax and unwind in our comfortable Deluxe Sea View Suites, which are superb 72 sqm retreats in a great waterfront location, with lagoon or sea views. A king-size bed is in the bedroom and the spacious ensuite bathroom offers a shower, bathtub and plenty of storage space in the separate walk-in wardrobe. </p>
+                <p class="details">The living room features a sofa corner and a dining table, while the balcony or the terrace has been furnished with sun loungers and an outdoor table. View a variety of satellite channels on the LCD TV and set the temperature of the air-conditioning to your preference. For your convenience free Wifi, tea and coffee making facilities are provided with our compliments.</p>
+                <p class="details">Deluxe Sea View Suites can accommodate a maximum of two adults and one child.</p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="price">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">1750</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">3000</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="image-title" id="ExecutiveSuite">Executive Suite</h1>
+        <p class="xsmall">with sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1111" checked>
+                    <input type="radio" name="r" id="r2222">
+                    <input type="radio" name="r" id="r3333">
+                    <input type="radio" name="r" id="r4444">
+                    <input type="radio" name="r" id="r5555">
+                    <div class="slide s1">
+                        <img src="../Images/41.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bedroom11.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom5.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/livingroom2.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/42.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r1111" class="bar"></label>
+                    <label for="r2222" class="bar"></label>
+                    <label for="r3333" class="bar"></label>
+                    <label for="r4444" class="bar"></label>
+                    <label for="r5555" class="bar"></label>
+                </div>
+            </div>
+        </div>
+            <div class="price2">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">2000</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">4000</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        <div class="room-details">
+            <div class="room-bio2">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>On-demand movies</li>
+                                    <li>DVD player</li>
+                                    <li>Work desk</li>
+                                    <li>Executive Lounge Access</li>
+                                    <li>Hypoallergenic bed</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Flat-screen TV</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Suite Details:</p>
+                <p class="details">Sumptuous surroundings, mood lighting and exceptional views of Sinai make our Executive Suites the perfect place to unwind. The 70 sqm includes a king bed, a spacious living room and a private balcony. The en-suite bathroom includes separate bathtub and walk-in shower. In-room facilities offer free high-speed internet, air-conditioning, a working desk, a safe, 49 inch Smart TV with casting, tea and espresso making facilities and minibar.</p>
+                <p class="details">Access to the Executive Lounge is offered to guests of the Executive Suites and allows them to enjoy benefits of breakfast, afternoon refreshments, evening drinks and canapés, newspapers and business services. Additional benefits include pressing on the arrival day (2 pieces), dedicated check-in/check-out.</p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+        <h1 class="image-title" id="FamilyRoom">Family Room</h1>
+        <p class="xsmall">with partial sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r6" checked>
+                    <input type="radio" name="r" id="r7">
+                    <input type="radio" name="r" id="r8">
+                    <input type="radio" name="r" id="r9">
+                    <input type="radio" name="r" id="r0">
+                    <div class="slide s1">
+                        <img src="../Images/kids.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/livingroom12.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bedroom4.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/51.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom11.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r6" class="bar"></label>
+                    <label for="r7" class="bar"></label>
+                    <label for="r8" class="bar"></label>
+                    <label for="r9" class="bar"></label>
+                    <label for="r0" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="room-details">
+            <div class="room-bio">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Balcony/Lanai/Terrace</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>Complimentary bottled water</li>
+                                    <li>Separate dining area</li>
+                                    <li>Work desk</li>
+                                    <li>King bed &amp; Twin bed</li>
+                                    <li>Walk-in closet</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Interconnecting rooms</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                    <li>Complimentary toiletries</li>
+                                    <li>Bidet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Room Details:</p>
+                <p class="details">The Family partial sea view Suite offers exquisite comfort and space for family or friends. The 112 sqm space features a comfortable living room with sofa corner and dining table, from which you can access the two separate ensuite bedrooms. It is located directly on the lagoon with a spacious terrace that is furnished with sun loungers and an outdoor dining table.</p>
+                <p class="details">In the master bedroom you can unwind on a king-size bed and in the large bathroom with bathtub, shower and walk-in wardrobe. The second bedroom has twin beds, a terrace and private bathroom with a shower. Satellite channels are shown on the LCD TV and in-room controlled air conditioning is available. Make a hot beverage of your choice, with complimentary tea and coffee making facilities. Free Wifi is also available.</p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="price">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">2250</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">4200</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="image-title" id="DeluxeVilla">Deluxe Villa</h1>
+        <p class="xsmall">with partial sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r66" checked>
+                    <input type="radio" name="r" id="r77">
+                    <input type="radio" name="r" id="r88">
+                    <input type="radio" name="r" id="r99">
+                    <input type="radio" name="r" id="r00">
+                    <div class="slide s1">
+                        <img src="../Images/61.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/64.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/minipool.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bedroom8.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom1.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r66" class="bar"></label>
+                    <label for="r77" class="bar"></label>
+                    <label for="r88" class="bar"></label>
+                    <label for="r99" class="bar"></label>
+                    <label for="r00" class="bar"></label>
+                </div>
+            </div>
+        </div>
+            <div class="price2">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">2Adults From <span class="pri">6000</span> EGP per/Night!</p>
+                        <p class="prices">4Adults From <span class="pri">11000</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        <div class="room-details">
+            <div class="room-bio2">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>On-demand movies</li>
+                                    <li>DVD player</li>
+                                    <li>Work desk</li>
+                                    <li>Free parking</li>
+                                    <li>King/Queen &amp; Twin beds</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Flat-screen TV</li>
+                                    <li>Separate dining area</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                    <li>Fully equipped kitchen</li>
+                                    <li>Microwave</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Villa Details:</p>
+                <p class="details">The Deluxe Villa is set amidst the lush greens, offering a relaxing view of the landscaped gardens. With a private patio and a spacious balcony, this 294 sqm. and elegantly furnished villa is a genuine sanctuary that exudes beauty and tranquility.</p>
+                <p class="details">The villa consists of 3 bedrooms that feature a King, Queen and Twin size beds, 3 bathrooms, a fully-fitted kitchen, a separate dining and living area, a private parking space and room for your personnel. It is equipped with individually-controlled air conditioning units, a free Wi-Fi connection, satellite LCD TVs and Media Hubs. The Deluxe Villa can accommodate a maximum of 6 persons including children.</p>
+                <p class="details">This villa truly exudes the charm of an ideal sanctuary with its great location, design and ultimately cozy ambience.</p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+        <h1 class="image-title" id="PresidentialSuite">Presidential Suite</h1>
+        <p class="xsmall">with sea view</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r666" checked>
+                    <input type="radio" name="r" id="r777">
+                    <input type="radio" name="r" id="r888">
+                    <input type="radio" name="r" id="r999">
+                    <input type="radio" name="r" id="r000">
+                    <div class="slide s1">
+                        <img src="../Images/71.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/72.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/header6.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bathroom3.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/header4.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r666" class="bar"></label>
+                    <label for="r777" class="bar"></label>
+                    <label for="r888" class="bar"></label>
+                    <label for="r999" class="bar"></label>
+                    <label for="r000" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="room-details">
+            <div class="room-bio">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Balcony/Lanai/Terrace</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>Complimentary bottled water</li>
+                                    <li>Separate dining area</li>
+                                    <li>Work desk</li>
+                                    <li>King bed &amp; Twin bed</li>
+                                    <li>Walk-in closet</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>CD player</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                    <li>Complimentary toiletries</li>
+                                    <li>Bidet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Suite Details:</p>
+                <p class="details">Embrace seaside luxury on the Gulf of Sinai shores when you book our opulent and exclusive Presidential Suite. Unwind on the spacious balcony’s relaxing daybed and feast your eyes on the stunning sea views, or chill inside in a generously proportioned living room with a dining area, private bar and foyer.</p>
+                <p class="details">The living room has an enormous 60-inch Smart TV, with another 42-inch Smart TV in the bedroom with its king-size bed. A DVD player and iPod docking station complement free WiFi. The ensuite bathroom features both a rain shower and separate bathtub. For your pleasure, you are welcome to enjoy breakfast and evening cocktails in the lounge.</p>
+                <p class="details">The Presidential Suite accommodates up to two adults and two children. Air conditioning, a desk, minibar and safe are provided.</p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="price">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">2500</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">4750</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="image-title" id="LuxuryBeachVilla">Luxury Beach Villa</h1>
+        <p class="xsmall">with private pool</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r6666" checked>
+                    <input type="radio" name="r" id="r7777">
+                    <input type="radio" name="r" id="r8888">
+                    <input type="radio" name="r" id="r9999">
+                    <input type="radio" name="r" id="r0000">
+                    <div class="slide s1">
+                        <img src="../Images/81.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/82.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bedroom2.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/pool.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/livingroom8.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r6666" class="bar"></label>
+                    <label for="r7777" class="bar"></label>
+                    <label for="r8888" class="bar"></label>
+                    <label for="r9999" class="bar"></label>
+                    <label for="r0000" class="bar"></label>
+                </div>
+            </div>
+        </div>
+            <div class="price2">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">3000</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">5750</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        <div class="room-details">
+            <div class="room-bio2">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>On-demand movies</li>
+                                    <li>DVD player</li>
+                                    <li>Work desk</li>
+                                    <li>Walk-in closet</li>
+                                    <li>King/Queen &amp; Twin beds</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Flat-screen TV</li>
+                                    <li>Separate dining area</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                    <li>Fully equipped kitchen</li>
+                                    <li>Microwave</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Villa Details:</p>
+                <p class="details">For the early birds, lounge on a bean bag on the upper deck sala of our Beach Pool Suite Sunrise and soak up the moment of the sun appearing on the horizon. It is the perfect spot to enjoy a coffee from our in-room espresso machine. Sit back and relax knowing the tropical gardens which surround you offer some release from the warm sun. Inside you'll find 190 sqms of private space designed in contemporary hues. the bedroom has a king bed with memory foam mattress. Extra guests can be accommodated on the large sofa bed in the separate living room. The bathroom is too sure to delight with an stand-alone bathtub, outside shower and premium amenities. The highlights of the lounging area are the private pool with sun loungers. Other amenities include a 55" and 49" LCD TVs &amp; minibar.</p>
+                <p class="details">Our Luxury Beach Pool Villa accommodates up to 3 adults, or 2 adults and 2 children.</p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+        <h1 class="image-title" id="PoolVillaLagoon">Pool Villa Lagoon</h1>
+        <p class="xsmall">overwater</p>
+        <div class="slide-image">
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="rx1" checked>
+                    <input type="radio" name="r" id="rx2">
+                    <input type="radio" name="r" id="rx3">
+                    <input type="radio" name="r" id="rx4">
+                    <input type="radio" name="r" id="rx5">
+                    <div class="slide s1">
+                        <img src="../Images/91.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/92.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/93.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/bedroom7.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/livingroom7.jpg">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="rx1" class="bar"></label>
+                    <label for="rx2" class="bar"></label>
+                    <label for="rx3" class="bar"></label>
+                    <label for="rx4" class="bar"></label>
+                    <label for="rx5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="room-details">
+            <div class="room-bio">
+                <div class="amenities">
+                    <p class="ameni">Show Amenities</p>
+                    <div class="habal">
+                        <p class="habal1">Amenities</p>
+                        <div class="blah">
+                            <div class="habal2">
+                                <p class="habal3">ROOM<br>------------</p>
+                                <ul class="ull">
+                                    <li>Air conditioning (controlled)</li>
+                                    <li>Balcony/Lanai/Terrace</li>
+                                    <li>Coffee/Tea maker</li>
+                                    <li>Complimentary bottled water</li>
+                                    <li>Separate dining area</li>
+                                    <li>Work desk</li>
+                                    <li>King bed &amp; Twin bed</li>
+                                    <li>Walk-in closet</li>
+                                    <li>Sitting area</li>
+                                    <li>Minibar</li>
+                                    <li>Iron and ironing board</li>
+                                    <li>National and international TV channels</li>
+                                    <li>Interconnecting rooms</li>
+                                    <li>CD player</li>
+                                </ul>
+                            </div>
+                            <div class="habal2">
+                                <p class="habal3">ROOM SERVICE<br>---------------------------</p>
+                                <ul class="ull">
+                                    <li>24-hour room service</li>
+                                    <li>Daily housekeeping</li>
+                                    <li>Wake Up Service</li>
+                                    <li>Trouser/Pant press</li>
+                                </ul>
+                                <p class="habal3">BATHROOM<br>--------------------</p>
+                                <ul class="ull">
+                                    <li>Separate bathtub and shower</li>
+                                    <li>Bathrobe</li>
+                                    <li>Slippers</li>
+                                    <li>Hairdryer</li>
+                                    <li>Complimentary toiletries</li>
+                                    <li>Bidet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="details-title">Villa Details:</p>
+                <p class="details">Feel the Ocean breeze as you sip your first coffee of the day from our Overwater Pool Villa. The tranquil surroundings and glass bottom floors give guests of this 140 sqm paradise every reason to truly unwind. Chill all day in either the private plunge pool or on a sun lounger. Step just a few meters away from the villa and enjoy the blue ocean. The marine life are never far away even in the outdoor shower and stand-alone bath. All come with the soothing sound of the waves. The bedroom offers contemporary calm with king or twin beds and a memory foam mattress. If you are looking for outside entertainment the 55" LCD TV and free WiFi should suffice.</p>
+                <p class="details">All villas have a minibar, wine cellar, and coffee with espresso machine. Air-conditioning, in-room safe and 24-hour in-villa are also available to guest. Overwater Pool Villa accommodate 2 adults and 1 child, under the age of 12-years-old.</p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="price">
+                <div class="front">
+                    <img src="../Images/transfer.jpg">
+                    <p class="inf">Complimentary Transfer</p>
+                    <p class="infx">Book and receive a luxury transfer for free!</p>
+                    <p class="view-price">VIEW PRICE!</p>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                        <img src="../Images/offerr.jpg">
+                        <p class="inf">Advance Purchace Offer</p>
+                        <p class="infx">Book in advance and save 10%!</p>
+                        <p class="dash">---------------------------------------------------------------</p>
+                        <p class="prices">1Adult From <span class="pri">3500</span> EGP per/Night!</p>
+                        <p class="prices">2Adults From <span class="pri">6500</span> EGP per/Night!</p>
+                        <p class="prices">Children under 12 years are for <span class="pri">Free!</span></p>
+                        <p class="prices">Teenagers will have <span class="pri">25% OFF!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="top" href="#"><i class="fas fa-chevron-up fa-3x"></i></a>
+        <iframe class="iframeFooter" src="../footer.html" scrolling="no"></iframe>
+    </body>
+</html>

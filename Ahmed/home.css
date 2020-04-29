@@ -1,0 +1,115 @@
+.iframeHeader
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 17%
+    
+}
+.iframeFooter
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 450px
+}
+.containerSlider
+{
+    text-align: center
+}
+pre
+{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    padding: 20px;
+    font-size: 50px;
+    background-color:azure;
+    opacity: 0.1;
+    color: black
+}
+.Welcome
+{
+    display: block;
+    font-size: 55px;
+    font-family: sans-serif
+}
+.parent
+{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: gray;
+}
+/****************************slider*********************************/
+.slider
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 20px
+}
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+/***********************slider ends*****************/
+.home
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    padding: 2%;
+    background-color: darkgray;
+    border-radius: 10px
+}
+.text
+{
+    width: 90%;
+    padding: 2%;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: inline-block;
+    background-image: url(../Images/welcome.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7
+}
+h1
+{
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: MV Boli;
+    margin: 20px;
+    color: black;
+}
+p
+{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Garamond;
+    color: black;
+    line-height: 30px
+}
+img
+{
+    border-radius: 10px
+}
